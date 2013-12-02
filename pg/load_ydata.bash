@@ -24,7 +24,7 @@ rm -f /tmp/ydata/ydata.csv
 # I want to run a series of shell commands which look like this:
 # grep -v Date /tmp/ydata/SPY.csv | sed '1,$s/^/SPY,/'  >> /tmp/ydata/ydata.csv
 
-grep "^[A-Z]" ~/hr/tkrlist.txt | awk '{print $1}'
+grep "^[A-Z]" ~/hr/tkrlist.txt | awk '{print "grep -v Date /tmp/ydata/"$1".csv | sed :1,$s/^/"$1",/: >> /tmp/ydata/ydata.csv"}'
 
 exit
 
