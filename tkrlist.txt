@@ -1,0 +1,24 @@
+# ~/hr/tkrlist.txt
+# A list of tickers
+
+BA
+CAT
+CVX
+DD
+DIS
+ED
+GE
+HON
+HPQ
+IBM
+JNJ
+KO
+MCD
+MMM
+MO
+MRK
+MRO
+NAV
+PG
+SPY
+XOM
