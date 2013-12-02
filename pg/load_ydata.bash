@@ -54,7 +54,7 @@ echo 'before I try to fill it.'
 ./psql.bash<<EOF
 -- Ensure that ydata exists.
 -- I might get an error here:
-\i cr_ydata.sql 
+\i ~/hr/pg/cr_ydata.sql 
 
 -- Assume current data in ydata is not needed.
 -- Since this is only a demo, I can toss it in the trash:
@@ -88,6 +88,7 @@ SELECT MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata;
 SELECT tkr, MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata GROUP BY tkr ORDER BY tkr ;
 EOF
 
+exit
 
 # Since I am about to UPDATE the closing_price column,
 # I will backup the data in it.
