@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# /pt/w/sbcj/dlcsv_yahoo.bash
+# ~/hr/dlcsv_yahoo.bash
 
 # I use this script to download CSV data from Yahoo
 
 # Demo:
-# /pt/w/sbcj/dlcsv_yahoo.bash IBM
+# ~/hr/dlcsv_yahoo.bash IBM
 
 if [ $# -lt 1 ] ; then
   echo Need 1 tkr
@@ -14,10 +14,11 @@ if [ $# -lt 1 ] ; then
   exit 0
 fi
 
-cd /tmp/
-mkdir -p /bak/sbcj/csv_files/
-cd       /bak/sbcj/csv_files/
+mkdir -p /tmp/hr/
+cd       /tmp/hr/
 
 wget --output-document=${1}.csv http://ichart.finance.yahoo.com/table.csv?s=${1}
+
+exit
 
 
