@@ -99,8 +99,6 @@ EOF
 echo 'wc -l /tmp/ydata/BA.csv'
       wc -l /tmp/ydata/BA.csv
 
-exit
-
 # Since I am about to UPDATE the closing_price column,
 # I will backup the data in it.
 echo 'The command below might issue an error:'
