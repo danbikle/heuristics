@@ -37,8 +37,6 @@ bash -x /tmp/ydata/build_ydata_csv.bash
 
 echo 'Here is head and tail of the CSV file I want to load:'
 head -3 /tmp/ydata/ydata.csv
-exit
-
 tail -3 /tmp/ydata/ydata.csv
 
 # Time for me to call psql which calls the COPY command to copy
@@ -53,7 +51,7 @@ echo 'I might see an error here:'
 echo 'ERROR:  relation "ydata" already exists'
 echo 'It is okay. I need to ensure that ydata exists'
 echo 'before I try to fill it.'
-./psqlmad.bash<<EOF
+./psql.bash<<EOF
 -- Ensure that ydata exists.
 -- I might get an error here:
 \i cr_ydata.sql 
@@ -84,7 +82,7 @@ EOF
 
 echo 'Here is the load report:'
 
-./psqlmad.bash<<EOF
+./psql.bash<<EOF
 SELECT MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata;
 
 SELECT tkr, MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata GROUP BY tkr ORDER BY tkr ;
@@ -96,7 +94,7 @@ EOF
 echo 'The command below might issue an error:'
 echo 'ERROR:  table "ydata_copy" does not exist'
 echo 'I need to drop it before I create and refill it.'
-./psqlmad.bash<<EOF
+./psql.bash<<EOF
 DROP   TABLE ydata_copy;
 -- Above command might give error
 
