@@ -1,61 +1,31 @@
 #!/bin/bash
 
-# ~/tv/postgres/load_ydata.bash
+# ~/hr/pg/load_ydata.bash
 
 # I use this script to load data from CSV files into table, ydata.
 
-# This script is only a demo.
-# If I want to load hundreds of tickers, instead of just these,
-# I use SQL (or some other looping mechanism)
-# to build a script and then I run that.
-
-# I already ran the wget script below so I comment it out.
-# You might find it useful to run it here:
-# ~/tv/wget_ydata.bash
-# If you did run the above wget script,
-# you should have CSV files in /tmp/ydata/
-
-# cd to the place where I have this repo.
-# On my host that place is ~/tv/
-
-if [ -e ~/tv/ ] ; then
+if [ -e ~/hr/pg ] ; then
   echo You are good to go.
 else
   echo I have a problem.
-  echo I should see a directory named ~/tv/
+  echo I should see a directory named ~/hr/pg
   echo Please study $0 for more clues.
   echo bye.
   exit 0
 fi
 
-cd ~/tv/
-cd postgres/
+cd ~/hr/pg/
+
 
 # I add tkr values to the CSV data and create one large CSV file.
 
 rm -f /tmp/ydata/ydata.csv
 
-grep -v Date /tmp/ydata/SPY.csv | sed '1,$s/^/SPY,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/BA.csv  | sed '1,$s/^/BA,/'   >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/CAT.csv	| sed '1,$s/^/CAT,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/CVX.csv	| sed '1,$s/^/CVX,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/DD.csv	| sed '1,$s/^/DD,/'   >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/DIS.csv	| sed '1,$s/^/DIS,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/ED.csv	| sed '1,$s/^/ED,/'   >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/GE.csv	| sed '1,$s/^/GE,/'   >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/HON.csv	| sed '1,$s/^/HON,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/HPQ.csv	| sed '1,$s/^/HPQ,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/IBM.csv	| sed '1,$s/^/IBM,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/JNJ.csv	| sed '1,$s/^/JNJ,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/KO.csv	| sed '1,$s/^/KO,/'   >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/MCD.csv	| sed '1,$s/^/MCD,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/MMM.csv	| sed '1,$s/^/MMM,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/MO.csv	| sed '1,$s/^/MO,/'   >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/MRK.csv	| sed '1,$s/^/MRK,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/MRO.csv	| sed '1,$s/^/MRO,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/NAV.csv	| sed '1,$s/^/NAV,/'  >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/PG.csv	| sed '1,$s/^/PG,/'   >> /tmp/ydata/ydata.csv
-grep -v Date /tmp/ydata/XOM.csv	| sed '1,$s/^/XOM,/'  >> /tmp/ydata/ydata.csv
+# I want to run a series of shell commands which look like this:
+# grep -v Date /tmp/ydata/SPY.csv | sed '1,$s/^/SPY,/'  >> /tmp/ydata/ydata.csv
+
+
+exit
 
 echo 'Here is head and tail of the CSV file I want to load:'
 head -3 /tmp/ydata/ydata.csv
@@ -68,10 +38,6 @@ tail -3 /tmp/ydata/ydata.csv
 # Ensure that postgres server can read the data:
 chmod 755 /tmp/ydata/
 chmod 644 /tmp/ydata/ydata.csv
-
-# I assume postgres authentication is setup.
-# I follow clues I wrote here: 
-# ~/tv/postgres/readme_authentication.txt
 
 echo 'I might see an error here:'
 echo 'ERROR:  relation "ydata" already exists'

@@ -1,5 +1,5 @@
 --
--- ~/tv/postgres/cr_ydata.sql
+-- ~/hr/pg/cr_ydata.sql
 --
 
 -- I use this script to create table ydata which holds price data from
