@@ -14,8 +14,8 @@ if [ $# -lt 1 ] ; then
   exit 0
 fi
 
-mkdir -p /tmp/hr/
-cd       /tmp/hr/
+mkdir -p /tmp/ydata/
+cd       /tmp/ydata/
 
 wget --output-document=${1}.csv http://ichart.finance.yahoo.com/table.csv?s=${1}
 
