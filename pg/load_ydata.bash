@@ -8,7 +8,7 @@ if [ -e ~/hr/pg ] ; then
   echo You are good to go.
 else
   echo I have a problem.
-  echo I should see a directory named ~/hr/pg
+  echo I should see a directory named ~/hr/pg/
   echo Please study $0 for more clues.
   echo bye.
   exit 0
@@ -18,12 +18,13 @@ cd ~/hr/pg/
 
 
 # I add tkr values to the CSV data and create one large CSV file.
-
+# But, rm it first:
 rm -f /tmp/ydata/ydata.csv
 
 # I want to run a series of shell commands which look like this:
 # grep -v Date /tmp/ydata/SPY.csv | sed '1,$s/^/SPY,/'  >> /tmp/ydata/ydata.csv
 
+grep "^[A-Z]" ~/hr/tkrlist.txt | awk '{print $1}'
 
 exit
 
