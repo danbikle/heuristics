@@ -81,8 +81,6 @@ tkr
 
 EOF
 
-exit
-
 # At this point,
 # my table, ydata, should be full of rows from /tmp/ydata/ydata.csv'
 
@@ -97,6 +95,9 @@ SELECT tkr, MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata GROUP BY tkr ORDER BY tk
 SELECT * FROM ydata WHERE tkr = 'BA' AND ydate = '2013-11-29';
 
 EOF
+
+echo 'wc -l /tmp/ydata/BA.csv'
+      wc -l /tmp/ydata/BA.csv
 
 exit
 
