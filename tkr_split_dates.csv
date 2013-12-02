@@ -1,4 +1,4 @@
-# ~/tv/tkr_split_dates.csv
+# ~/hr/tkr_split_dates.csv
 # This file is a demo of a file I use to collect split dates of tickers.
 # Once this file is up to date,
 # I use a script to read this file and issue a series of 
@@ -8,7 +8,7 @@
 # Originally I wanted to separate the three columns with comma.
 # But now I like plain white space.
 
-# Some of the data below was obtained from ~/tv/qry_abrupt.sql
+# Some of the data below was obtained from ~/hr/qry_abrupt.sql
 # Some was obtained from google of 'stock split dates.'
 
 # Format:
