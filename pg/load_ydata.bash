@@ -22,20 +22,23 @@ cd ~/hr/pg/
 rm -f /tmp/ydata/ydata.csv
 
 # I want to run a series of shell commands which look like this:
-# grep -v Date /tmp/ydata/SPY.csv | sed '1,$s/^/SPY,/'  >> /tmp/ydata/ydata.csv
+# grep -v Date /tmp/ydata/SPY.csv | sed '1,$s/^/SPY,/' >> /tmp/ydata/ydata.csv
 
 grep "^[A-Z]" ~/hr/tkrlist.txt | \
   awk '{print "grep -v Date /tmp/ydata/"$1".csv | sed :1,$s/^/"$1",/: >> /tmp/ydata/ydata.csv"}' | \
   sed '1,$s/:/'"'"'/g' >> /tmp/ydata/build_ydata_csv.bash
 
 echo I just used grep and ~/hr/tkrlist.txt to create /tmp/ydata/build_ydata_csv.bash
-echo The head looks like this:
-head /tmp/ydata/build_ydata_csv.bash
+# echo The head looks like this:
+# head /tmp/ydata/build_ydata_csv.bash
 
-exit
+# Run it:
+bash -x /tmp/ydata/build_ydata_csv.bash
 
 echo 'Here is head and tail of the CSV file I want to load:'
 head -3 /tmp/ydata/ydata.csv
+exit
+
 tail -3 /tmp/ydata/ydata.csv
 
 # Time for me to call psql which calls the COPY command to copy
