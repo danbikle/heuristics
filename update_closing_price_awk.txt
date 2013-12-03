@@ -1,4 +1,4 @@
-This file created by /home/oracle/hr/cr_upd_cp.bash
+This file created by ./cr_upd_cp.bash
 UPDATE ydata SET closing_price=closing_price*3 WHERE tkr=:DD: AND ydate>:1979-06-28:;
 UPDATE ydata SET closing_price=closing_price*3 WHERE tkr=:DD: AND ydate>:1990-01-19:;
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:DD: AND ydate>:1997-06-12:;
@@ -104,3 +104,16 @@ UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:XOM: AND ydate>:1997-0
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:XOM: AND ydate>:1987-09-14:;
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:XOM: AND ydate>:1981-06-11:;
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:XOM: AND ydate>:1976-07-23:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:ABT: AND ydate>:2012-12-31:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:CERN: AND ydate>:2013-06-28:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:CL: AND ydate>:2013-05-15:;
+UPDATE ydata SET closing_price=closing_price*4 WHERE tkr=:CRM: AND ydate>:2013-04-17:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:DVA: AND ydate>:2013-09-06:;
+UPDATE ydata SET closing_price=closing_price*3 WHERE tkr=:FAS: AND ydate>:2013-04-01:;
+UPDATE ydata SET closing_price=closing_price*3 WHERE tkr=:FLS: AND ydate>:2013-06-21:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:NKE: AND ydate>:2012-12-24:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:TRMB: AND ydate>:2013-03-20:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:UPRO: AND ydate>:2013-06-07:;
+UPDATE ydata SET closing_price=closing_price*.1 WHERE tkr=:UVXY: AND ydate>:2013-06-07:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:WFM: AND ydate>:2013-05-29:;
+UPDATE ydata SET closing_price=closing_price*.3 WHERE tkr=:VXX: AND ydate>:2013-11-07:;

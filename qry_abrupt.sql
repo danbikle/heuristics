@@ -11,8 +11,8 @@
 SELECT
 tkr
 ,ydate
-,closing_price
 ,ROUND(closing_price/cp_next_day,1) poss_split_ratio
+,closing_price
 ,cp_next_day
 ,cp_next_day - closing_price AS price_delta
 ,100 * (cp_next_day - closing_price)/closing_price AS price_delta_pct
@@ -36,8 +36,8 @@ ORDER BY tkr,ydate DESC
 SELECT
 tkr
 ,ydate
-,closing_price
 ,ROUND(closing_price/cp_next_day,1) poss_split_ratio
+,closing_price
 ,cp_next_day
 ,cp_next_day - closing_price AS price_delta
 ,100 * (cp_next_day - closing_price)/closing_price AS price_delta_pct
@@ -53,7 +53,7 @@ FROM
 ) subq
 -- Any price delta > 17 pct is suspicious:
 WHERE ABS(100 * (cp_next_day - closing_price)/closing_price) > 17
-AND ydate > sysdate - 365
+AND ydate > sysdate - 365 * 3
 ORDER BY tkr,ydate DESC
 ;
 
