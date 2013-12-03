@@ -1,0 +1,1 @@
+../update_closing_price.sql
