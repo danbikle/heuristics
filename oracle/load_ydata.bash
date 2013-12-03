@@ -62,8 +62,6 @@ chmod 644 /tmp/ydata/ydata.csv
 TRUNCATE TABLE ydata;
 EOF
 
-exit
-
 # Time to call sqlldr, 
 # assume that ydata.ctl is in my current working directory (CWD).
 
@@ -71,12 +69,6 @@ sqlldr trade/t bindsize=20971520 readsize=20971520 rows=123456 control=ydata.ctl
 
 echo 'Here is the load report:'
 grep loaded /tmp/ydata/ydata.log.txt
-
-sqlplus trade/t <<EOF
-SELECT MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata;
-
-SELECT tkr, MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata GROUP BY tkr ORDER BY tkr ;
-EOF
 
 # Since I am about to UPDATE the closing_price column,
 # I will backup the data in it.
@@ -104,6 +96,15 @@ ORDER BY tkr,ydate
 
 DROP   TABLE ydata;
 RENAME ydata_copy TO ydata;
+
+--rpt:
+SELECT MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata;
+
+SELECT tkr, MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata GROUP BY tkr ORDER BY tkr ;
+
+-- BA AND XOM is my canary in coal mine:
+SELECT * FROM ydata WHERE tkr = 'BA'  and ydate = (SELECT MIN(ydate) FROM ydata);
+SELECT * FROM ydata WHERE tkr = 'XOM' and ydate = (SELECT MAX(ydate) FROM ydata);
 
 EOF
 
