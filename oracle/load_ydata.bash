@@ -122,6 +122,5 @@ exit
 # After I UPDATE, those abrupt changes (due to stock splits) 
 # should be gone.
 
-# The scripts in ../ should work for both Oracle and Postgres.
 
 
