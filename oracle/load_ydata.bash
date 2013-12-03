@@ -9,7 +9,8 @@ if [ -e ~/hr/oracle ] ; then
 else
   echo I have a problem.
   echo I should see a directory named ~/hr/oracle/
-  echo Please study $0 for more clues.
+  echo Please mkdir -p ~/hr/oracle/
+  echo Maybe study $0 for more clues.
   echo bye.
   exit 0
 fi
@@ -18,11 +19,10 @@ set -x
 
 cd ~/hr/oracle/
 
-
 # I add tkr values to the CSV data and create one large CSV file.
 # But, rm it first:
 rm -f /tmp/ydata/ydata.csv
-And the builder script:
+# And the builder script:
 rm -f /tmp/ydata/build_ydata_csv.bash
 
 # I want to run a series of shell commands which look like this:
@@ -51,7 +51,61 @@ tail -3 /tmp/ydata/ydata.csv
 chmod 755 /tmp/ydata/
 chmod 644 /tmp/ydata/ydata.csv
 
-# Ensure I have the ydata target table created:
+# Assume I have an Oracle user created with this SQL command:
+# GRANT DBA TO trade IDENTIFIED BY t;
+
+# Ensure I have the ydata target table created.
+# If it already exists,
+# Dont worry, be happy:
+~/hr/sqt<<EOF
+@cr_ydata.sql
+TRUNCATE TABLE ydata;
+EOF
+
+exit
+
+# Time to call sqlldr, 
+# assume that ydata.ctl is in my current working directory (CWD).
+
+sqlldr trade/t bindsize=20971520 readsize=20971520 rows=123456 control=ydata.ctl log=/tmp/ydata/ydata.log.txt bad=/tmp/ydata/ydata.bad.txt
+
+echo 'Here is the load report:'
+grep loaded /tmp/ydata/ydata.log.txt
+
+sqlplus trade/t <<EOF
+SELECT MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata;
+
+SELECT tkr, MIN(ydate),COUNT(tkr),MAX(ydate) FROM ydata GROUP BY tkr ORDER BY tkr ;
+EOF
+
+# Since I am about to UPDATE the closing_price column,
+# I will backup the data in it.
+echo 'The command below should issue an error:'
+echo 'ORA-00942: table or view does not exist'
+sqlplus trade/t <<EOF
+DROP   TABLE ydata_copy;
+-- Above command should give error:
+-- ORA-00942: table or view does not exist
+
+CREATE TABLE ydata_copy COMPRESS AS
+SELECT
+tkr
+,ydate   
+,opn     
+,mx      
+,mn      
+,closing_price
+,vol     
+,adjclse 
+,closing_price AS closing_price_orig
+FROM ydata
+ORDER BY tkr,ydate
+;
+
+DROP   TABLE ydata;
+RENAME ydata_copy TO ydata;
+
+EOF
 
 exit
 
@@ -69,5 +123,4 @@ exit
 
 # The scripts in ../ should work for both Oracle and Postgres.
 
-exit
 
