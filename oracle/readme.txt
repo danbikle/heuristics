@@ -18,3 +18,4 @@ cd ~/hr/
 
 cd ~/hr/oracle
 ~/hr/sqt @hr.sql
+~/hr/sqt @qry_tvs.sql
