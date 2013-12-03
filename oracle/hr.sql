@@ -2,20 +2,7 @@
 -- ~/hr/oracle/hr.sql
 --
 
--- DROP   TABLE ydata;
-CREATE TABLE ydata COMPRESS AS
-SELECT
-tkr
-,ydate
-,clse0 closing_price
-,clse0 closing_price_orig
-FROM yahoodata
-ORDER BY tkr,ydate
-;
-
--- @update_closing_price.sql
-
--- DROP   TABLE tv10;
+DROP   TABLE tv10;
 CREATE TABLE tv10 COMPRESS AS
 SELECT
 tkr,ydate
@@ -269,69 +256,69 @@ tkr,ydate
 ,ma40sd
 ,ma80sd
 ,ma200sd
-,1.0*STDDEV(ma02s  )OVER() ma02s_st
-,1.0*STDDEV(ma03s  )OVER() ma03s_st
-,1.0*STDDEV(ma04s  )OVER() ma04s_st
-,1.0*STDDEV(ma05s  )OVER() ma05s_st
-,1.0*STDDEV(ma09s  )OVER() ma09s_st
-,1.0*STDDEV(ma20s  )OVER() ma20s_st
-,1.0*STDDEV(ma40s  )OVER() ma40s_st
-,1.0*STDDEV(ma80s  )OVER() ma80s_st
-,1.0*STDDEV(ma200s )OVER() ma200s_st
-,1.0*STDDEV(d0102  )OVER() d0102_st
-,1.0*STDDEV(d0103  )OVER() d0103_st
-,1.0*STDDEV(d0104  )OVER() d0104_st
-,1.0*STDDEV(d0105  )OVER() d0105_st
-,1.0*STDDEV(d0109  )OVER() d0109_st
-,1.0*STDDEV(d0120  )OVER() d0120_st
-,1.0*STDDEV(d0140  )OVER() d0140_st
-,1.0*STDDEV(d0180  )OVER() d0180_st
-,1.0*STDDEV(d01200 )OVER() d01200_st
-,1.0*STDDEV(d0203  )OVER() d0203_st
-,1.0*STDDEV(d0204  )OVER() d0204_st
-,1.0*STDDEV(d0205  )OVER() d0205_st
-,1.0*STDDEV(d0209  )OVER() d0209_st
-,1.0*STDDEV(d0220  )OVER() d0220_st
-,1.0*STDDEV(d0240  )OVER() d0240_st
-,1.0*STDDEV(d0280  )OVER() d0280_st
-,1.0*STDDEV(d02200 )OVER() d02200_st
-,1.0*STDDEV(d0304  )OVER() d0304_st
-,1.0*STDDEV(d0305  )OVER() d0305_st
-,1.0*STDDEV(d0309  )OVER() d0309_st
-,1.0*STDDEV(d0320  )OVER() d0320_st
-,1.0*STDDEV(d0340  )OVER() d0340_st
-,1.0*STDDEV(d0380  )OVER() d0380_st
-,1.0*STDDEV(d03200 )OVER() d03200_st
-,1.0*STDDEV(d0405  )OVER() d0405_st
-,1.0*STDDEV(d0409  )OVER() d0409_st
-,1.0*STDDEV(d0420  )OVER() d0420_st
-,1.0*STDDEV(d0440  )OVER() d0440_st
-,1.0*STDDEV(d0480  )OVER() d0480_st
-,1.0*STDDEV(d04200 )OVER() d04200_st
-,1.0*STDDEV(d0509  )OVER() d0509_st
-,1.0*STDDEV(d0520  )OVER() d0520_st
-,1.0*STDDEV(d0540  )OVER() d0540_st
-,1.0*STDDEV(d0580  )OVER() d0580_st
-,1.0*STDDEV(d05200 )OVER() d05200_st
-,1.0*STDDEV(d0920  )OVER() d0920_st
-,1.0*STDDEV(d0940  )OVER() d0940_st
-,1.0*STDDEV(d0980  )OVER() d0980_st
-,1.0*STDDEV(d09200 )OVER() d09200_st
-,1.0*STDDEV(d2040  )OVER() d2040_st
-,1.0*STDDEV(d2080  )OVER() d2080_st
-,1.0*STDDEV(d20200 )OVER() d20200_st
-,1.0*STDDEV(d4080  )OVER() d4080_st
-,1.0*STDDEV(d40200 )OVER() d40200_st
-,1.0*STDDEV(d80200 )OVER() d80200_st
-,1.0*STDDEV(ma02sd )OVER() ma02sd_st
-,1.0*STDDEV(ma03sd )OVER() ma03sd_st
-,1.0*STDDEV(ma04sd )OVER() ma04sd_st
-,1.0*STDDEV(ma05sd )OVER() ma05sd_st
-,1.0*STDDEV(ma09sd )OVER() ma09sd_st
-,1.0*STDDEV(ma20sd )OVER() ma20sd_st
-,1.0*STDDEV(ma40sd )OVER() ma40sd_st
-,1.0*STDDEV(ma80sd )OVER() ma80sd_st
-,1.0*STDDEV(ma200sd )OVER() ma200sd_st
+,1.5*STDDEV(ma02s  )OVER() ma02s_st
+,1.5*STDDEV(ma03s  )OVER() ma03s_st
+,1.5*STDDEV(ma04s  )OVER() ma04s_st
+,1.5*STDDEV(ma05s  )OVER() ma05s_st
+,1.5*STDDEV(ma09s  )OVER() ma09s_st
+,1.5*STDDEV(ma20s  )OVER() ma20s_st
+,1.5*STDDEV(ma40s  )OVER() ma40s_st
+,1.5*STDDEV(ma80s  )OVER() ma80s_st
+,1.5*STDDEV(ma200s )OVER() ma200s_st
+,1.5*STDDEV(d0102  )OVER() d0102_st
+,1.5*STDDEV(d0103  )OVER() d0103_st
+,1.5*STDDEV(d0104  )OVER() d0104_st
+,1.5*STDDEV(d0105  )OVER() d0105_st
+,1.5*STDDEV(d0109  )OVER() d0109_st
+,1.5*STDDEV(d0120  )OVER() d0120_st
+,1.5*STDDEV(d0140  )OVER() d0140_st
+,1.5*STDDEV(d0180  )OVER() d0180_st
+,1.5*STDDEV(d01200 )OVER() d01200_st
+,1.5*STDDEV(d0203  )OVER() d0203_st
+,1.5*STDDEV(d0204  )OVER() d0204_st
+,1.5*STDDEV(d0205  )OVER() d0205_st
+,1.5*STDDEV(d0209  )OVER() d0209_st
+,1.5*STDDEV(d0220  )OVER() d0220_st
+,1.5*STDDEV(d0240  )OVER() d0240_st
+,1.5*STDDEV(d0280  )OVER() d0280_st
+,1.5*STDDEV(d02200 )OVER() d02200_st
+,1.5*STDDEV(d0304  )OVER() d0304_st
+,1.5*STDDEV(d0305  )OVER() d0305_st
+,1.5*STDDEV(d0309  )OVER() d0309_st
+,1.5*STDDEV(d0320  )OVER() d0320_st
+,1.5*STDDEV(d0340  )OVER() d0340_st
+,1.5*STDDEV(d0380  )OVER() d0380_st
+,1.5*STDDEV(d03200 )OVER() d03200_st
+,1.5*STDDEV(d0405  )OVER() d0405_st
+,1.5*STDDEV(d0409  )OVER() d0409_st
+,1.5*STDDEV(d0420  )OVER() d0420_st
+,1.5*STDDEV(d0440  )OVER() d0440_st
+,1.5*STDDEV(d0480  )OVER() d0480_st
+,1.5*STDDEV(d04200 )OVER() d04200_st
+,1.5*STDDEV(d0509  )OVER() d0509_st
+,1.5*STDDEV(d0520  )OVER() d0520_st
+,1.5*STDDEV(d0540  )OVER() d0540_st
+,1.5*STDDEV(d0580  )OVER() d0580_st
+,1.5*STDDEV(d05200 )OVER() d05200_st
+,1.5*STDDEV(d0920  )OVER() d0920_st
+,1.5*STDDEV(d0940  )OVER() d0940_st
+,1.5*STDDEV(d0980  )OVER() d0980_st
+,1.5*STDDEV(d09200 )OVER() d09200_st
+,1.5*STDDEV(d2040  )OVER() d2040_st
+,1.5*STDDEV(d2080  )OVER() d2080_st
+,1.5*STDDEV(d20200 )OVER() d20200_st
+,1.5*STDDEV(d4080  )OVER() d4080_st
+,1.5*STDDEV(d40200 )OVER() d40200_st
+,1.5*STDDEV(d80200 )OVER() d80200_st
+,1.5*STDDEV(ma02sd )OVER() ma02sd_st
+,1.5*STDDEV(ma03sd )OVER() ma03sd_st
+,1.5*STDDEV(ma04sd )OVER() ma04sd_st
+,1.5*STDDEV(ma05sd )OVER() ma05sd_st
+,1.5*STDDEV(ma09sd )OVER() ma09sd_st
+,1.5*STDDEV(ma20sd )OVER() ma20sd_st
+,1.5*STDDEV(ma40sd )OVER() ma40sd_st
+,1.5*STDDEV(ma80sd )OVER() ma80sd_st
+,1.5*STDDEV(ma200sd )OVER() ma200sd_st
 ,AVG(ma02s  )OVER() ma02s_av
 ,AVG(ma03s  )OVER() ma03s_av
 ,AVG(ma04s  )OVER() ma04s_av
