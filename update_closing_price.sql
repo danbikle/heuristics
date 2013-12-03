@@ -1,4 +1,4 @@
--- This script created by ./cr_upd_cp.bash
+-- This script created by /home/oracle/hr/cr_upd_cp.bash
 UPDATE ydata SET closing_price=closing_price*3 WHERE tkr='DD' AND ydate>'1979-06-28';
 UPDATE ydata SET closing_price=closing_price*3 WHERE tkr='DD' AND ydate>'1990-01-19';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='DD' AND ydate>'1997-06-12';
