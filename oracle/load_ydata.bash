@@ -51,6 +51,7 @@ tail -3 /tmp/ydata/ydata.csv
 chmod 755 /tmp/ydata/
 chmod 644 /tmp/ydata/ydata.csv
 
+# Ensure I have the ydata target table created:
 
 exit
 

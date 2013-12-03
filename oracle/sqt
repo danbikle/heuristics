@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# sqt
+
+# I use this script to connect to Oracle.
+
+if [ -f ~/.orcl ] ; then
+  . ~/.orcl
+fi
+
+sqlplus trade/t $@
+
+exit
