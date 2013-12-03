@@ -959,8 +959,14 @@ SELECT
 tkr,ydate
 ,y1
 ,y2
+,y3
+,y4
+,y5
 ,ng1
 ,ng2
+,ng3
+,ng4
+,ng5
 ,ma02s_lt
 ,ma03s_lt
 ,ma04s_lt
