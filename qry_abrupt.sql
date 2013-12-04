@@ -57,3 +57,5 @@ AND ydate > sysdate - 365 * 3
 ORDER BY tkr,ydate DESC
 ;
 
+exit
+

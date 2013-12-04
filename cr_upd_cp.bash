@@ -14,6 +14,7 @@ tail -3 update_closing_price_awk.txt
 echo "-- This script created by $0" > update_closing_price.sql
 grep ':' update_closing_price_awk.txt | sed '1,$s/:/'"'"'/g' >> update_closing_price.sql
 echo 'COMMIT;' >> update_closing_price.sql
+echo exit      >> update_closing_price.sql
 
 head -3 update_closing_price.sql
 tail -3 update_closing_price.sql
