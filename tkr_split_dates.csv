@@ -184,78 +184,11 @@ XIV    2011-06-24    10
 PBR    2008-05-07    2
 NUE    2006-05-31    2
 EXP    2006-02-26    3
-
-# Jun 9 2005
-# 
-# The following ETFs split 3-for-1 this morning:
-# 
-#     iShares MSCI Emerging Markets (EEM)
-# 
-#      
-#     iShares Russell 2000 Value (IWN)
-# 
-#      
-#     iShares S&P SmallCap 600 (IJR)
-# 
-#      
-#     iShares MSCI EAFE (EFA).
-# 
-# Meanwhile those below split two-for-one this morning:
-# 
-#     iShares Goldman Sachs Natural Resources (IGE)
-# 
-#      
-#     iShares S&P MidCap 400/Barra Growth (IJK)
-# 
-#      
-#     iShares S&P MidCap 400 (IJH)
-# 
-#      
-#     iShares S&P MidCap 400/Barra Value (IJJ)
-# 
-#      
-#     iShares Russell 2000 (IWM)
-# 
-#      
-#     iShares Cohen & Steers Realty Majors (ICF)
-# 
-#      
-#     iShares S&P SmallCap 600/Barra Value (IJS)
-# 
-#      
-#     iShares Dow Jones U.S. Real Estate (IYR).
-# 
-# Barclays Global Investors Announces Share Split of Certain iShares® Funds
-# 
-# San Francisco, July 11, 2008 - Barclays Global Investors (BGI), a
-# worldwide leader in exchange-traded funds, announced today that the
-# Board of Directors of iShares, Inc. and the Board of Trustees of
-# iShares Trust have authorized a split of the shares of 15 iShares
-# Funds (listed below) for shareholders of record as of the close of
-# business on July 21, 2008, payable after the close of trading on July
-# 23, 2008. Fund shares will begin trading on a split-adjusted basis on
-# July 24th. Post-split shares are expected to be distributed to
-# shareholders' accounts on July 28, 2008, and shareholders are expected
-# to see the change in their holdings sometime after July 28th,
-# depending upon their brokerage firm's procedures.
-# 
-# 
-# 
-# 
-# Fund Name Ticker U.S. Listing Exchange Split Ratio
-# iShares S&P Latin America 40 Index Fund ILF NYSE Arca 5 for 1
-# iShares FTSE/Xinhua China 25 Index Fund FXI NYSE Arca 3 for 1
-# iShares MSCI Emerging Markets Index Fund EEM NYSE Arca 3 for 1
-# iShares MSCI Pacific ex-Japan Index Fund EPP NYSE Arca 3 for 1
-# iShares Russell Midcap Value Index Fund IWS NYSE Arca 3 for 1
-# iShares S&P Global Energy Sector Index Fund IXC NYSE Arca 3 for 1
-# iShares S&P North American Natural Resources Sector Index Fund IGE NYSE Arca 3 for 1
-# iShares Dow Jones Energy Sector Fund IYE NYSE Arca 3 for 1
-# iShares S&P SmallCap 600 Growth Index Fund IJT NYSE Arca 2 for 1
-# iShares S&P 1500 Index Fund ISI NYSE Arca 2 for 1
-# iShares MSCI South Africa Fund EZA NYSE Arca 2 for 1
-# iShares S&P/TOPIX 150 Index Fund ITF NYSE Arca 2 for 1
-# iShares MSCI EMU Index Fund EZU NYSE Arca 2 for 1
-# iShares Russell Midcap Growth Index Fund IWP NYSE Arca 2 for 1
-# iShares S&P Europe 350 Index Fund IEV NYSE Arca 2 for 1 
-#         
+EFA    2005-06-08    3
+EEM    2005-06-08    3
+IWN    2005-06-08    3
+IJR    2005-06-08    3
+IWM    2005-06-08    2
+IYR    2005-06-08    2
+FXI    2008-07-23    3
+EEM    2008-07-23    3
