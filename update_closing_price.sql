@@ -144,3 +144,4 @@ UPDATE ydata SET closing_price=closing_price*10 WHERE tkr='XIV' AND ydate>'2011-
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='PBR' AND ydate>'2008-05-07';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='NUE' AND ydate>'2006-05-31';
 COMMIT;
+exit
