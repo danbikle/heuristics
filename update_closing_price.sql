@@ -155,5 +155,18 @@ UPDATE ydata SET closing_price=closing_price*3 WHERE tkr='EEM' AND ydate>'2008-0
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='HAL' AND ydate>'2006-07-16';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='HAL' AND ydate>'1997-07-21';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='MAR' AND ydate>'2006-06-11';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='PX' AND ydate>'2003-12-15';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='ROK' AND ydate>'1987-04-13';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='ROK' AND ydate>'1983-06-19';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='SBUX' AND ydate>'2005-11-23';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='SBUX' AND ydate>'2001-04-29';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='SBUX' AND ydate>'1999-03-21';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='SBUX' AND ydate>'1995-12-03';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='SBUX' AND ydate>'1993-09-29';
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr='CAH' AND ydate>'2001-04-22';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='BBBY' AND ydate>'2000-08-13';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='BBBY' AND ydate>'1998-08-02';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='BBBY' AND ydate>'1996-04-30';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='BBBY' AND ydate>'1993-07-08';
 COMMIT;
 exit
