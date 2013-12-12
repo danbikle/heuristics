@@ -197,3 +197,4 @@ UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:NEM: AND ydate>:1987-0
 UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr=:NEM: AND ydate>:1987-10-08:;
 UPDATE ydata SET closing_price=closing_price*1241/1000 WHERE tkr=:NEM: AND ydate>:1994-04-21:;
 UPDATE ydata SET closing_price=closing_price*1/4 WHERE tkr=:GDXJ: AND ydate>:2013-06-30:;
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr=:CHKP: AND ydate>:2001-02-12:;
