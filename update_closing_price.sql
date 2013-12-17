@@ -202,5 +202,7 @@ UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='HSIC' AND ydate>'2005-
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='LLL' AND ydate>'2002-05-20';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='PRGO' AND ydate>'1993-08-25';
 UPDATE ydata SET closing_price=closing_price*1/3 WHERE tkr='TWC' AND ydate>'2009-03-12';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='APC' AND ydate>'2006-05-29';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='DNB' AND ydate>'2000-10-02';
 COMMIT;
 exit
