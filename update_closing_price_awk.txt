@@ -207,3 +207,10 @@ UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:DNB: AND ydate>:2000-1
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:UNP: AND ydate>:2008-05-28:;
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:UNP: AND ydate>:1991-10-01:;
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:UNP: AND ydate>:1980-05-11:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:FISV: AND ydate>:2013-12-16:;
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr=:FISV: AND ydate>:2001-08-30:;
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr=:FISV: AND ydate>:1999-04-29:;
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr=:FISV: AND ydate>:1998-05-28:;
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr=:FISV: AND ydate>:1993-04-30:;
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr=:FISV: AND ydate>:1992-05-28:;
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr=:FISV: AND ydate>:1991-06-30:;
