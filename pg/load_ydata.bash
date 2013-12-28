@@ -28,6 +28,7 @@ rm -f /tmp/ydata/build_ydata_csv.bash
 # I want to run a series of shell commands which look like this:
 # grep -v Date /tmp/ydata/SPY.csv | sed '1,$s/^/SPY,/' >> /tmp/ydata/ydata.csv
 
+mkdir -p /tmp/ydata/
 grep "^[A-Z]" ~/hr/tkrlist.txt | \
   awk '{print "grep -v Date /tmp/ydata/"$1".csv | sed :1,$s/^/"$1",/: >> /tmp/ydata/ydata.csv"}' | \
   sed '1,$s/:/'"'"'/g' >> /tmp/ydata/build_ydata_csv.bash
