@@ -147,5 +147,9 @@ EOF
 
 # The scripts in ../ should work for both Oracle and Postgres.
 
+cd ~/hr/
+./cr_upd_cp.bash
+./psql.bash -f update_closing_price.sql
+
 exit
 
