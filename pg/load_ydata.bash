@@ -15,9 +15,10 @@ else
 fi
 
 set -x
+cd ~/hr/
+./wget_ydata.bash
 
 cd ~/hr/pg/
-
 
 # I add tkr values to the CSV data and create one large CSV file.
 # But, rm it first:
