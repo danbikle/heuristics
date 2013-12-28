@@ -22,7 +22,7 @@ cd ~/hr/pg/
 # I add tkr values to the CSV data and create one large CSV file.
 # But, rm it first:
 rm -f /tmp/ydata/ydata.csv
-And the builder script:
+# And the builder script:
 rm -f /tmp/ydata/build_ydata_csv.bash
 
 # I want to run a series of shell commands which look like this:
