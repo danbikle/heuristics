@@ -285,5 +285,10 @@ UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='CVS' AND ydate>'1989-0
 UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr='DRI' AND ydate>'2002-05-01';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='EXPD' AND ydate>'2006-06-25';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='TOT' AND ydate>'2006-05-22';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='UNFI' AND ydate>'2004-04-19';
+UPDATE ydata SET closing_price=closing_price*5 WHERE tkr='NVO' AND ydate>'2014-01-08';
+UPDATE ydata SET closing_price=closing_price*64/5 WHERE tkr='VZ' AND ydate>'2010-07-01';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='NWSA' AND ydate>'2004-11-02';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='PVH' AND ydate>'1991-10-09';
 COMMIT;
 exit
