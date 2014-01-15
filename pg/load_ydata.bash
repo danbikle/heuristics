@@ -31,6 +31,7 @@ rm -f /tmp/ydata/build_ydata_csv.bash
 
 mkdir -p /tmp/ydata/
 grep "^[A-Z]" ~/hr/tkrlist.txt | \
+  sort -u | \
   awk '{print "grep -v Date /tmp/ydata/"$1".csv | sed :1,$s/^/"$1",/: >> /tmp/ydata/ydata.csv"}' | \
   sed '1,$s/:/'"'"'/g' >> /tmp/ydata/build_ydata_csv.bash
 
