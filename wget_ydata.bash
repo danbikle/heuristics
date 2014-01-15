@@ -7,7 +7,7 @@
 mkdir -p /tmp/ydata/
 cd       /tmp/ydata/
 
-cat ~/hr/tkrlist.txt | awk '{print "~/hr/dlcsv_yahoo.bash",$1}' | grep "[A-Z]" > wget_ydata_temp.bash
+cat ~/hr/tkrlist.txt | sort -u | awk '{print "~/hr/dlcsv_yahoo.bash",$1}' | grep "[A-Z]" > wget_ydata_temp.bash
 
 bash -x wget_ydata_temp.bash
 
