@@ -290,5 +290,12 @@ UPDATE ydata SET closing_price=closing_price*5 WHERE tkr='NVO' AND ydate>'2014-0
 UPDATE ydata SET closing_price=closing_price*64/5 WHERE tkr='VZ' AND ydate>'2010-07-01';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='NWSA' AND ydate>'2004-11-02';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='PVH' AND ydate>'1991-10-09';
+UPDATE ydata SET closing_price=closing_price*16/49 WHERE tkr='AXP' AND ydate>'2005-10-02';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='COH' AND ydate>'2005-04-04';
+UPDATE ydata SET closing_price=closing_price*47/64 WHERE tkr='COP' AND ydate>'2012-04-30';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='MCK' AND ydate>'1998-01-04';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='SYMC' AND ydate>'2004-11-30';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='TSO' AND ydate>'2007-05-29';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='GME' AND ydate>'2007-03-18';
 COMMIT;
 exit
