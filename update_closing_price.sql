@@ -301,5 +301,8 @@ UPDATE ydata SET closing_price=closing_price*10 WHERE tkr='BIDU' AND ydate>'2010
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='APA' AND ydate>'2004-01-14';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='DVN' AND ydate>'2004-11-15';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='OXY' AND ydate>'2006-08-15';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='USNA' AND ydate>'2003-10-30';
+UPDATE ydata SET closing_price=closing_price*1/50 WHERE tkr='WAC' AND ydate>'2009-04-22';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='WWW' AND ydate>'2013-11-03';
 COMMIT;
 exit
