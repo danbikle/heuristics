@@ -306,5 +306,6 @@ UPDATE ydata SET closing_price=closing_price*1/50 WHERE tkr='WAC' AND ydate>'200
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='WWW' AND ydate>'2013-11-03';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='PNRA' AND ydate>'2002-06-24';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='YUM' AND ydate>'2007-06-26';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='IGTE' AND ydate>'1998-04-12';
 COMMIT;
 exit
