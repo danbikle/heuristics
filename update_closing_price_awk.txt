@@ -322,3 +322,6 @@ UPDATE ydata SET closing_price=closing_price*3 WHERE tkr=:ACGL: AND ydate>:2011-
 UPDATE ydata SET closing_price=closing_price*105/100 WHERE tkr=:CINF: AND ydate>:2005-04-03:;
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:DORM: AND ydate>:2012-06-17:;
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:FCFS: AND ydate>:2006-02-21:;
+UPDATE ydata SET closing_price=closing_price*3 WHERE tkr=:COF: AND ydate>:1999-06-01:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:MS: AND ydate>:2000-01-26:;
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr=:TJX: AND ydate>:2012-02-02:;
