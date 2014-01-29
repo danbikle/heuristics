@@ -342,5 +342,8 @@ UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='CELG' AND ydate>'2006-
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='CHRW' AND ydate>'2005-10-16';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='DISH' AND ydate>'2000-03-22';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='INTU' AND ydate>'2006-07-06';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='LMT' AND ydate>'1999-01-03';
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr='PCAR' AND ydate>'2007-10-09';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='PII' AND ydate>'2011-09-11';
 COMMIT;
 exit
