@@ -28,7 +28,7 @@ FROM
 ) subq
 -- Any price delta > 17 pct is suspicious:
 WHERE ABS(100 * (cp_next_day - closing_price)/closing_price) > 17
-AND ydate BETWEEN '2013-01-01' AND '2014-01-01'
+AND ydate BETWEEN '2012-01-01' AND '2013-01-01'
 ORDER BY tkr,ydate DESC
 ;
 
