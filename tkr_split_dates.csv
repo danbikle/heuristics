@@ -11,10 +11,15 @@
 # Some of the data below was obtained from ~/hr/qry_abrupt.sql
 # Some was obtained from google of 'stock split dates.'
 
+# Yahoo tip:
+# If they report split on the 2nd,
+# I list the 1st in this file.
+
 # Format:
 # ticker  date  old_price/new_price
 
 AAP    2004-01-03    2
+AAP    2005-09-25    3/2
 AAPL   2005-02-27    2
 ABT    2012-12-31    2
 ACE    1998-03-02    3
