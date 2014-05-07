@@ -1,4 +1,8 @@
 -- This script created by ./cr_upd_cp.bash
+UPDATE ydata SET closing_price=closing_price*they WHERE tkr='#' AND ydate>'If';
+UPDATE ydata SET closing_price=closing_price*list WHERE tkr='#' AND ydate>'I';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='AAP' AND ydate>'2004-01-03';
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr='AAP' AND ydate>'2005-09-25';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='AAPL' AND ydate>'2005-02-27';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='ABT' AND ydate>'2012-12-31';
 UPDATE ydata SET closing_price=closing_price*3 WHERE tkr='ACE' AND ydate>'1998-03-02';
