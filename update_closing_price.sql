@@ -364,5 +364,6 @@ UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='OKE' AND ydate>'2012-0
 UPDATE ydata SET closing_price=closing_price*1/4 WHERE tkr='TBT' AND ydate>'2012-10-05';
 UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr='INSY' AND ydate>'2014-03-28';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='UA' AND ydate>'2014-04-14';
+UPDATE ydata SET closing_price=closing_price*1/32 WHERE tkr='EQIX' AND ydate>'2002-12-30';
 COMMIT;
 exit
