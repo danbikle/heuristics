@@ -7,7 +7,7 @@
 
 echo "This file created by $0" > update_closing_price_awk.txt
 grep "[0-2]" tkr_split_dates.csv|grep -v they|grep -v list| \
-  awk '{print "UPDATE ydata SET closing_price=closing_price*"$3" WHERE tkr=:"$1": AND ydate>:"$2":;"}' >> update_closing_price_awk.txt
+  awk '{print "UPDATE ydata SET closing_price=closing_price/"$3" WHERE tkr=:"$1": AND ydate<:"$2":;"}' >> update_closing_price_awk.txt
 
 head -3 update_closing_price_awk.txt
 tail -3 update_closing_price_awk.txt
