@@ -1,6 +1,4 @@
 -- This script created by ./cr_upd_cp.bash
-UPDATE ydata SET closing_price=closing_price*they WHERE tkr='#' AND ydate>'If';
-UPDATE ydata SET closing_price=closing_price*list WHERE tkr='#' AND ydate>'I';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='AAP' AND ydate>'2004-01-03';
 UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr='AAP' AND ydate>'2005-09-25';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='AAPL' AND ydate>'2005-02-27';
@@ -250,6 +248,7 @@ UPDATE ydata SET closing_price=closing_price*4 WHERE tkr='NOK' AND ydate>'2000-0
 UPDATE ydata SET closing_price=closing_price*3 WHERE tkr='NSC' AND ydate>'1997-10-09';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='NUE' AND ydate>'2006-05-31';
 UPDATE ydata SET closing_price=closing_price*5 WHERE tkr='NVO' AND ydate>'2014-01-08';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='NVO' AND ydate>'2007-12-16';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='NWSA' AND ydate>'2004-11-02';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='OCN' AND ydate>'1997-11-20';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='OXY' AND ydate>'2006-08-15';
@@ -366,5 +365,13 @@ UPDATE ydata SET closing_price=closing_price*1/4 WHERE tkr='TBT' AND ydate>'2012
 UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr='INSY' AND ydate>'2014-03-28';
 UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='UA' AND ydate>'2014-04-14';
 UPDATE ydata SET closing_price=closing_price*1/32 WHERE tkr='EQIX' AND ydate>'2002-12-30';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='FFIN' AND ydate>'2014-06-02';
+UPDATE ydata SET closing_price=closing_price*3/2 WHERE tkr='FFIN' AND ydate>'2011-06-01';
+UPDATE ydata SET closing_price=closing_price*4/3 WHERE tkr='FFIN' AND ydate>'2005-06-01';
+UPDATE ydata SET closing_price=closing_price*1/10 WHERE tkr='CDE' AND ydate>'2009-05-26';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='GD' AND ydate>'2006-03-26';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='SIAL' AND ydate>'2007-01-02';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='ORLY' AND ydate>'2005-06-15';
+UPDATE ydata SET closing_price=closing_price*2 WHERE tkr='CLC' AND ydate>'2005-05-01';
 COMMIT;
 exit
