@@ -25,6 +25,8 @@ FROM
   ,LEAD(closing_price) OVER (PARTITION BY tkr ORDER BY ydate) AS cp_next_day
   FROM ydata
   WHERE closing_price > 0
+  and ydate > '1884-01-01'
+  and tkr = 'FFIN'
 ) subq
 -- Any price delta > 17 pct is suspicious:
 WHERE ABS(100 * (cp_next_day - closing_price)/closing_price) > 17
