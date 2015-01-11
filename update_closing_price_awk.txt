@@ -202,7 +202,7 @@ UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:LLL: AND ydate<:2002-0
 UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:LLTC: AND ydate<:2000-03-27:;
 UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:LNG: AND ydate<:2005-04-24:;
 UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:LULU: AND ydate<:2011-07-11:;
-UPDATE ydata SET closing_price=closing_price/10 WHERE tkr=:MA: AND ydate<:2014-01-21:;
+UPDATE ydata SET closing_price=closing_price/10 WHERE tkr=:MA: AND ydate<:2014-01-22:;
 UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:MAR: AND ydate<:2006-06-11:;
 UPDATE ydata SET closing_price=closing_price/5/4 WHERE tkr=:MAT: AND ydate<:1996-03-03:;
 UPDATE ydata SET closing_price=closing_price/3/2 WHERE tkr=:MCD: AND ydate<:1971-06-11:;
@@ -369,8 +369,8 @@ UPDATE ydata SET closing_price=closing_price/3/2 WHERE tkr=:INSY: AND ydate<:201
 UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:UA: AND ydate<:2014-04-15:;
 UPDATE ydata SET closing_price=closing_price/1/32 WHERE tkr=:EQIX: AND ydate<:2002-12-30:;
 UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:FFIN: AND ydate<:2014-06-03:;
-UPDATE ydata SET closing_price=closing_price/3/2 WHERE tkr=:FFIN: AND ydate<:2011-06-01:;
-UPDATE ydata SET closing_price=closing_price/4/3 WHERE tkr=:FFIN: AND ydate<:2005-06-01:;
+UPDATE ydata SET closing_price=closing_price/3/2 WHERE tkr=:FFIN: AND ydate<:2011-06-02:;
+UPDATE ydata SET closing_price=closing_price/4/3 WHERE tkr=:FFIN: AND ydate<:2005-06-02:;
 UPDATE ydata SET closing_price=closing_price/1/10 WHERE tkr=:CDE: AND ydate<:2009-05-26:;
 UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:GD: AND ydate<:2006-03-26:;
 UPDATE ydata SET closing_price=closing_price/2 WHERE tkr=:SIAL: AND ydate<:2007-01-02:;

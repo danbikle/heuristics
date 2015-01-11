@@ -16,6 +16,7 @@ tkr
 ,cp_next_day
 ,cp_next_day - closing_price AS price_delta
 ,100 * (cp_next_day - closing_price)/closing_price AS price_delta_pct
+,closing_price_orig
 FROM
 (
   SELECT
@@ -23,6 +24,7 @@ FROM
   ,ydate
   ,closing_price
   ,LEAD(closing_price) OVER (PARTITION BY tkr ORDER BY ydate) AS cp_next_day
+  ,closing_price_orig
   FROM ydata
   WHERE closing_price > 0
   and ydate > '1884-01-01'
