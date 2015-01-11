@@ -35,4 +35,4 @@ WHERE ABS(100 * (cp_next_day - closing_price)/closing_price) > 17
 ORDER BY tkr,ydate DESC
 ;
 
-exit
+
