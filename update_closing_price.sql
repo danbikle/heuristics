@@ -33,7 +33,8 @@ UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='ARG' AND ydat
 UPDATE ydata SET closing_price=closing_price/(16/20::float) WHERE tkr='ASH' AND ydate<'2005-06-30';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='ATVI' AND ydate<'2008-09-07';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='AXE' AND ydate<'1996-10-25';
-UPDATE ydata SET closing_price=closing_price/(16/49::float) WHERE tkr='AXP' AND ydate<'2005-10-02';
+UPDATE ydata SET closing_price=closing_price/(16/49::float) WHERE tkr='AXP' AND ydate<'2005-10-03';
+UPDATE ydata SET closing_price=closing_price/(3::float) WHERE tkr='AXP' AND ydate<'2000-05-10';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='BA' AND ydate<'1966-05-17';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='BA' AND ydate<'1977-09-12';
 UPDATE ydata SET closing_price=closing_price/(3/2::float) WHERE tkr='BA' AND ydate<'1979-04-12';
@@ -269,7 +270,7 @@ UPDATE ydata SET closing_price=closing_price/(3::float) WHERE tkr='POT' AND ydat
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='PRGO' AND ydate<'1993-08-25';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='PVH' AND ydate<'1991-10-09';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='PX' AND ydate<'2003-12-15';
-UPDATE ydata SET closing_price=closing_price/(4::float) WHERE tkr='RIO' AND ydate<'2010-04-29';
+UPDATE ydata SET closing_price=closing_price/(4::float) WHERE tkr='RIO' AND ydate<'2010-04-30';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='RLI' AND ydate<'2014-01-16';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='ROK' AND ydate<'1983-06-19';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='ROK' AND ydate<'1987-04-13';
@@ -300,7 +301,7 @@ UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TQQQ' AND yda
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TQQQ' AND ydate<'2014-01-24';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TRMB' AND ydate<'2013-03-21';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TSO' AND ydate<'2007-05-29';
-UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TTC' AND ydate<'2012-06-29';
+UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TTC' AND ydate<'2012-06-30';
 UPDATE ydata SET closing_price=closing_price/(1/3::float) WHERE tkr='TWC' AND ydate<'2009-03-12';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TXI' AND ydate<'1997-03-02';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TYC' AND ydate<'2012-09-28';
@@ -388,5 +389,6 @@ UPDATE ydata SET closing_price=closing_price/(3/2::float) WHERE tkr='INSY' AND y
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='POWI' AND ydate<'1999-11-23';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TKR' AND ydate<'1997-06-02';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TREX' AND ydate<'2014-05-08';
+UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='GIS' AND ydate<'2010-06-09';
 COMMIT;
 exit
