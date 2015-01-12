@@ -27,7 +27,7 @@ FROM
   ,closing_price_orig
   FROM ydata
   WHERE closing_price > 0
-  and ydate between  '2013-01-01' and  '2014-01-01'
+  and ydate between  '2010-01-01' and  '2011-01-01'
 ) subq
 -- Any price delta > 17 pct is suspicious:
 WHERE ABS(100 * (cp_next_day - closing_price)/closing_price) > 17
