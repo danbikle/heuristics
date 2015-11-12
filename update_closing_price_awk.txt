@@ -33,7 +33,7 @@ UPDATE ydata SET closing_price=closing_price/(2xxfloat) WHERE tkr=:ARG: AND ydat
 UPDATE ydata SET closing_price=closing_price/(16/20xxfloat) WHERE tkr=:ASH: AND ydate<:2005-06-30:;
 UPDATE ydata SET closing_price=closing_price/(2xxfloat) WHERE tkr=:ATVI: AND ydate<:2008-09-07:;
 UPDATE ydata SET closing_price=closing_price/(2xxfloat) WHERE tkr=:AXE: AND ydate<:1996-10-25:;
-UPDATE ydata SET closing_price=closing_price/(16/49xxfloat) WHERE tkr=:AXP: AND ydate<:2005-10-03:;
+UPDATE ydata SET closing_price=closing_price/(57.44/50.75xxfloat) WHERE tkr=:AXP: AND ydate<:2005-10-03:;
 UPDATE ydata SET closing_price=closing_price/(3xxfloat) WHERE tkr=:AXP: AND ydate<:2000-05-10:;
 UPDATE ydata SET closing_price=closing_price/(2xxfloat) WHERE tkr=:BA: AND ydate<:1966-05-17:;
 UPDATE ydata SET closing_price=closing_price/(2xxfloat) WHERE tkr=:BA: AND ydate<:1977-09-12:;
