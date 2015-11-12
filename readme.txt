@@ -14,3 +14,6 @@ The script I use is listed below:
 ~/hr/pg/load_ydata.bash
 
 
+The github repo:
+git@github.com:danbikle/heuristics.git
+https://github.com/danbikle/heuristics.git
