@@ -16,8 +16,13 @@ fi
 
 set -x
 cd ~/hr/
-./wget_ydata.bash
+echo ./wget_ydata.bash now fails due to changes at yahoo.com
+mkdir -p /tmp/ydata/
 
+# Now I should have many CSV files full of prices.
+# For example: /tmp/ydata/IBM.csv
+
+exit
 cd ~/hr/pg/
 
 # I add tkr values to the CSV data and create one large CSV file.
@@ -32,7 +37,7 @@ rm -f /tmp/ydata/build_ydata_csv.bash
 mkdir -p /tmp/ydata/
 grep "^[A-Z]" ~/hr/tkrlist.txt | \
   sort -u | \
-  awk '{print "grep -v Date /tmp/ydata/"$1".csv | sed :1,$s/^/"$1",/: >> /tmp/ydata/ydata.csv"}' | \
+  awk '{print "grep -v date /tmp/ydata/"$1".csv | sed :1,$s/^/"$1",/: >> /tmp/ydata/ydata.csv"}' | \
   sed '1,$s/:/'"'"'/g' >> /tmp/ydata/build_ydata_csv.bash
 
 echo I just used grep and ~/hr/tkrlist.txt to create /tmp/ydata/build_ydata_csv.bash
