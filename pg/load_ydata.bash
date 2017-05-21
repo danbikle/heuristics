@@ -17,7 +17,7 @@ fi
 cd ~/hr/pg/
 
 # I should fill /tmp/ydata/ydata.csv
-~/downbounce/script/tkrprice2ydata.py
+python ~/downbounce/script/tkrprice2ydata.py
 
 # I should exclude some 'null' values I found:
 sed -i '/null/d' /tmp/ydata/ydata.csv
