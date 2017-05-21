@@ -9,14 +9,9 @@
 
 CREATE TABLE ydata
 (
-tkr VARCHAR(9)
-,ydate   DATE
-,opn     DECIMAL
-,mx      DECIMAL
-,mn      DECIMAL
-,closing_price DECIMAL
-,vol     DECIMAL
-,adjclse DECIMAL
+tkr                 VARCHAR(9)
+,ydate              DATE
+,closing_price      DECIMAL
 ,closing_price_orig DECIMAL
 )
 ;
