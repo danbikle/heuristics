@@ -390,5 +390,6 @@ UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='POWI' AND yda
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TKR' AND ydate<'1997-06-02';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='TREX' AND ydate<'2014-05-08';
 UPDATE ydata SET closing_price=closing_price/(2::float) WHERE tkr='GIS' AND ydate<'2010-06-09';
+UPDATE ydata SET closing_price=closing_price/(2202/1000::float) WHERE tkr='HPQ' AND ydate<'2015-10-30';
 COMMIT;
 exit

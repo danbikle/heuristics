@@ -116,7 +116,6 @@ EOF
 # should be gone.
 
 # The scripts in ../ should work for both Oracle and Postgres.
-exit
 
 cd ~/hr/
 ./cr_upd_cp.bash
