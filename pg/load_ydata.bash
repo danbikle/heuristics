@@ -53,12 +53,7 @@ TRUNCATE TABLE ydata;
 COPY ydata (
 tkr
 ,ydate     
-,opn      
-,mx
-,mn
 ,closing_price
-,vol
-,adjclse
 ) FROM '/tmp/ydata/ydata.csv' WITH csv
 ;
 
@@ -79,9 +74,6 @@ SELECT * FROM ydata WHERE tkr = 'BA' AND ydate = '2013-11-29';
 
 EOF
 
-echo 'wc -l /tmp/ydata/BA.csv'
-      wc -l /tmp/ydata/BA.csv
-
 # Since I am about to UPDATE the closing_price column,
 # I will backup the data in it.
 echo 'The command below might issue an error:'
@@ -95,12 +87,7 @@ CREATE TABLE ydata_copy AS
 SELECT
 tkr
 ,ydate   
-,opn     
-,mx      
-,mn      
 ,closing_price
-,vol     
-,adjclse 
 ,closing_price AS closing_price_orig
 FROM ydata
 ORDER BY tkr,ydate
@@ -130,6 +117,7 @@ EOF
 
 # The scripts in ../ should work for both Oracle and Postgres.
 exit
+
 cd ~/hr/
 ./cr_upd_cp.bash
 ./psql.bash -f update_closing_price.sql
