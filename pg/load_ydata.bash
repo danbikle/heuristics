@@ -14,38 +14,13 @@ else
   exit 0
 fi
 
-set -x
-cd ~/hr/
-echo ./wget_ydata.bash now fails due to changes at yahoo.com
-mkdir -p /tmp/ydata/
-
-# Now I should have many CSV files full of prices.
-# For example: /tmp/ydata/IBM.csv
-
-exit
 cd ~/hr/pg/
 
-# I add tkr values to the CSV data and create one large CSV file.
-# But, rm it first:
-rm -f /tmp/ydata/ydata.csv
-# And the builder script:
-rm -f /tmp/ydata/build_ydata_csv.bash
+# I should fill /tmp/ydata/ydata.csv
+~/downbounce/script/tkrprice2ydata.py
 
-# I want to run a series of shell commands which look like this:
-# grep -v Date /tmp/ydata/SPY.csv | sed '1,$s/^/SPY,/' >> /tmp/ydata/ydata.csv
-
-mkdir -p /tmp/ydata/
-grep "^[A-Z]" ~/hr/tkrlist.txt | \
-  sort -u | \
-  awk '{print "grep -v date /tmp/ydata/"$1".csv | sed :1,$s/^/"$1",/: >> /tmp/ydata/ydata.csv"}' | \
-  sed '1,$s/:/'"'"'/g' >> /tmp/ydata/build_ydata_csv.bash
-
-echo I just used grep and ~/hr/tkrlist.txt to create /tmp/ydata/build_ydata_csv.bash
-# echo The head looks like this:
-# head /tmp/ydata/build_ydata_csv.bash
-
-# Run it:
-bash -x /tmp/ydata/build_ydata_csv.bash
+# I should exclude some 'null' values I found:
+sed -i '/null/d' /tmp/ydata/ydata.csv
 
 echo 'Here is head and tail of the CSV file I want to load:'
 head -3 /tmp/ydata/ydata.csv
@@ -154,7 +129,7 @@ EOF
 # should be gone.
 
 # The scripts in ../ should work for both Oracle and Postgres.
-
+exit
 cd ~/hr/
 ./cr_upd_cp.bash
 ./psql.bash -f update_closing_price.sql
