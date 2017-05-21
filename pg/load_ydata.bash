@@ -4,36 +4,6 @@
 
 # I use this script to load data from CSV files into table, ydata.
 
-if [ -e ~/hr/pg ] ; then
-  echo You are good to go.
-else
-  echo I have a problem.
-  echo I should see a directory named ~/hr/pg/
-  echo Please study $0 for more clues.
-  echo bye.
-  exit 0
-fi
-
-cd ~/hr/pg/
-
-# I should fill /tmp/ydata/ydata.csv
-python ~/downbounce/script/tkrprice2ydata.py
-
-# I should exclude some 'null' values I found:
-sed -i '/null/d' /tmp/ydata/ydata.csv
-
-echo 'Here is head and tail of the CSV file I want to load:'
-head -3 /tmp/ydata/ydata.csv
-tail -3 /tmp/ydata/ydata.csv
-
-# Time for me to call psql which calls the COPY command to copy
-# rows out of /tmp/ydata/ydata.csv
-# into the table, ydata.
-
-# Ensure that postgres server can read the data:
-chmod 755 /tmp/ydata/
-chmod 644 /tmp/ydata/ydata.csv
-
 echo 'I might see an error here:'
 echo 'ERROR:  relation "ydata" already exists'
 echo 'It is okay. I need to ensure that ydata exists'
@@ -54,13 +24,15 @@ COPY ydata (
 tkr
 ,ydate     
 ,closing_price
-) FROM '/tmp/ydata/ydata.csv' WITH csv
+) FROM '/home/tkrprice/tkrprice/static/ydata.csv' WITH csv
 ;
 
 EOF
 
+# The above CSV file should have been filled by a cronjob owned by tkrprice
+
 # At this point,
-# my table, ydata, should be full of rows from /tmp/ydata/ydata.csv'
+# my table, ydata, should be full of rows from ydata.csv'
 
 echo 'Here is the load report:'
 
